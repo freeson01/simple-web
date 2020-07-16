@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-web-deployment
+  name: simple-web
   namespace: testbed
 spec:
   replicas: 1
