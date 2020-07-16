@@ -11,10 +11,18 @@ plugins {
     id 'java-library'
 }
 
+apply plugin: 'java'
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'app'
+	}
 }
 
 dependencies {
@@ -26,4 +34,6 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+    
+    compile group:'javax.servlet', name:'javax.servlet-api', version:'3.1.0'
 }
